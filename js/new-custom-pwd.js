@@ -74,7 +74,7 @@ $(function(){
                 } else if (action == "backspace") {
                     taileredTxt(cursorStart, txt, cursorStart - 1);
                 } else if (action == "pasted") {
-                    taileredTxt(cursorStart, txt, cursorStart - 1);
+                    taileredTxt(cursorEnd, txt, cursorStart);
                     cursorEnd = $(inptVal).get(0).value.length;
                     cursorStart = cursorEnd;
                 }
@@ -133,7 +133,7 @@ $(function(){
     var taileredTxt = function(a, b, c) {
         txtBefore = currentVal.substring(0, c); //text Before
         txtAfter = currentVal.substring(a, $("#" + srcInpt).val().length); //text After
-        // console.log("txtBefore :" + txtBefore + ",Txt : " + b + ", txtAfter :" + txtAfter);
+        console.log("txtBefore :" + txtBefore + ",Txt : " + b + ", txtAfter :" + txtAfter);
         currentVal = txtBefore + b + txtAfter;
         return currentVal;
     }   
