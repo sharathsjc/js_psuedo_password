@@ -20,7 +20,7 @@ $(function(){
     
     $("#" + srcInpt).on("keydown", function(e) {
         // console.log(e.keyCode);
-        if ((e.ctrlKey && e.keyCode == 90) || (e.ctrlKey && e.keyCode == 65) || (e.keyCode == 32) || (e.keyCode == 13)) {
+        if ((e.ctrlKey && e.keyCode == 90) || (e.ctrlKey && e.keyCode == 65) || (e.keyCode == 32)) {
             // console.log("Z is pressed : "+e.key);
             event.preventDefault();
             return false;
@@ -133,7 +133,7 @@ $(function(){
     var taileredTxt = function(a, b, c) {
         txtBefore = currentVal.substring(0, c); //text Before
         txtAfter = currentVal.substring(a, $("#" + srcInpt).val().length); //text After
-        console.log("txtBefore :" + txtBefore + ",Txt : " + b + ", txtAfter :" + txtAfter);
+        // console.log("txtBefore :" + txtBefore + ",Txt : " + b + ", txtAfter :" + txtAfter);
         currentVal = txtBefore + b + txtAfter;
         return currentVal;
     }   
